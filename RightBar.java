@@ -2,6 +2,10 @@ import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
 
+//Subclass
+
+//See Upbar
+
 public class RightBar extends Bar {
 	
 	public TimerTask testTask = new TimerTask(){
