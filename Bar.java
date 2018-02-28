@@ -2,26 +2,26 @@ import java.awt.Button;
 import java.awt.Color;
 import java.awt.Label;
 import java.awt.Rectangle;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Timer;
-import java.util.TimerTask;
 
 public class Bar {
 
 	public ArrayList<Label> labels = new ArrayList<Label>();
 	public Button base = new Button();
 	public Boolean shrinking = false;
-	public Timer test = new Timer();
+	public Label baseLine = new Label();
+	public Timer shrinkTimer = new Timer();
+	public Boolean Done = false;
 	
 	
-	Bar(Rectangle b1, Rectangle l1){
+	Bar(Rectangle b1, Rectangle bl1,  Rectangle l1){
 		
 		base.setBackground(Color.black);
 		base.setBounds(b1);
 		
-		
+		baseLine.setBounds(bl1);
+		baseLine.setBackground(Color.black);
 		
 		Label temp = new Label();
 		temp.setBackground(Color.black);

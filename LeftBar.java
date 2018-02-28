@@ -2,15 +2,15 @@ import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class UpBar extends Bar {
-
-	public TimerTask testTask = new TimerTask() {
+public class LeftBar extends Bar {
+	
+	public TimerTask testTask = new TimerTask(){
 		public void run() {
 			shrinkLines();
 		}
-	};
+	};;
 	
-	UpBar(Rectangle b1, Rectangle bl1 , Rectangle l1){
+	LeftBar(Rectangle b1, Rectangle bl1 , Rectangle l1){
 		super(b1, bl1, l1);
 		base.addActionListener(new ActionListener() {
 			
@@ -28,7 +28,6 @@ public class UpBar extends Bar {
 						shrinkTimer.scheduleAtFixedRate(testTask, 0, 10);
 						shrinking = true;
 					}
-					System.out.println(shrinking);
 			}
 		});
 	}
@@ -36,10 +35,10 @@ public class UpBar extends Bar {
 	public void shrinkLines() {
 		for(int i = 0; i < labels.size(); i++ ) {
 			Rectangle temp = labels.get(i).getBounds();
-			if (temp.getY() > baseLine.getY()) {
-				labels.get(i).setBounds((int)temp.getX(), (int)temp.getY()- 1, (int)temp.getWidth(), (int)temp.getHeight());
-			} else if(temp.getHeight() > 0) {
-				labels.get(i).setBounds((int)temp.getX(), (int)temp.getY(), (int)temp.getWidth(), (int)temp.getHeight() - 1);
+			if (temp.getX() > baseLine.getX()) {
+				labels.get(i).setBounds((int)temp.getX() - 1, (int)temp.getY(), (int)temp.getWidth(), (int)temp.getHeight());
+			} else if(temp.getWidth() > 0) {
+				labels.get(i).setBounds((int)temp.getX(), (int)temp.getY(), (int)temp.getWidth() - 1, (int)temp.getHeight());
 			} else if(i == labels.size() - 1) {
 				Done = true;
 				shrinkTimer.cancel();
@@ -48,5 +47,4 @@ public class UpBar extends Bar {
 			}
 		}
 	}
-	
 }
