@@ -13,8 +13,7 @@ public class Bar {
 	public Label baseLine = new Label();
 	public Timer shrinkTimer = new Timer();
 	public Boolean Done = false;
-	
-	
+
 	Bar(Rectangle b1, Rectangle bl1,  Rectangle l1){
 		
 		base.setBackground(Color.black);
