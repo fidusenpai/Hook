@@ -12,38 +12,30 @@ public class Bar {
 	public Boolean Done = false;
 	
 	
-	Bar(Rectangle b1, Rectangle bl1, int Direction, int Length){
+	Bar(Point b1, Point bl1, int bl1x, int bl1y, int Direction, int Length){
 		
-		base.setBackground(Color.black);
-		base.setBounds(b1);
+		base.setBackground(Color.red);
+		base.setBounds((int)b1.getX(), (int)b1.getY(), 30, 30);
 		
-		baseLine.setBounds(bl1);
+		baseLine.setBounds((int)bl1.getX(), (int)bl1.getY(), bl1x, bl1y);
 		baseLine.setBackground(Color.black);
 		
-		addLabel(Direction, Length);
+		addLabel(Direction, Length, 0);
 	}
 	
-//	public void addLabel(Rectangle l1) {
-//		Label temp = new Label();
-//		temp.setBackground(Color.black);
-//		temp.setBounds(l1);
-//		temp.setName("0");
-//		labels.add(temp);
-//	}
-	
-	public void addLabel(int Direction, int Length) {
+	public void addLabel(int Direction, int Length, int spacing) {
 		Label temp = new Label();
 		Point coords = setStart();
 		temp.setBackground(Color.black);
 		temp.setName(Integer.toString(Direction));
 		if(Direction == 0) {
-			temp.setBounds((int)coords.getX(), (int)coords.getY()  - Length, 4, Length);
+			temp.setBounds((int)coords.getX(), (int)coords.getY()  - Length - spacing, 4, Length);
 		} else if(Direction == 1) {
-			temp.setBounds((int)coords.getX(), (int)coords.getY(), 4, Length);
+			temp.setBounds((int)coords.getX(), (int)coords.getY() + spacing, 4, Length);
 		} else if(Direction == 2) {
-			temp.setBounds((int)coords.getX() - Length, (int)coords.getY(), Length, 4);
+			temp.setBounds((int)coords.getX() - Length - spacing, (int)coords.getY(), Length, 4);
 		}	else if(Direction == 3) {
-			temp.setBounds((int)coords.getX(), (int)coords.getY(), Length, 4);
+			temp.setBounds((int)coords.getX() + spacing, (int)coords.getY(), Length, 4);
 		}
 		
 		labels.add(temp);
@@ -76,16 +68,16 @@ public class Bar {
 	}
 	
 	public void addHook(int Direction1, int Direction2) {
-		addLabel(Direction1, 25);
-		addLabel(Direction2, 50);
+		addLabel(Direction1, 25, 0);
+		addLabel(Direction2, 50, 0);
 		if(Direction1 == 0){
-			addLabel(1, 29);
+			addLabel(1, 29, 0);
 		} else if(Direction1 == 1) {
-			addLabel(0, 21);
+			addLabel(0, 21, 0);
 		} else if(Direction1 == 2) {
-			addLabel(3, 29);
+			addLabel(3, 29, 0);
 		} else if(Direction1 == 3) {
-			addLabel(2, 21);
+			addLabel(2, 21, 0);
 		}
 	}
 }
