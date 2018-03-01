@@ -10,14 +10,15 @@ public class LeftBar extends Bar {
 		}
 	};;
 	
-	LeftBar(Rectangle b1, Rectangle bl1 ,   int Length){
-		super(b1, bl1, 3, Length);
+	LeftBar(Point b1, Point bl1, int Length){
+		super(b1, bl1, 4, 50, 3, Length);
 		base.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
 					if(shrinking) {
 						shrinkTimer.cancel();
 						shrinking = false;
+						base.setBackground(Color.red);
 					} else {
 						testTask = new TimerTask() {
 							public void run() {
@@ -27,6 +28,7 @@ public class LeftBar extends Bar {
 						shrinkTimer = new Timer();
 						shrinkTimer.scheduleAtFixedRate(testTask, 0, 10);
 						shrinking = true;
+						base.setBackground(Color.green);
 					}
 			}
 		});
