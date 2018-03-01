@@ -48,6 +48,7 @@ public class Bar {
 		
 		labels.add(temp);
 	}
+	
 	public Point setStart() {
 		Label temp = new Label();
 		Point output = new Point();
@@ -71,8 +72,20 @@ public class Bar {
 			}
 		}
 		
-		
 		return output;
-		
+	}
+	
+	public void addHook(int Direction1, int Direction2) {
+		addLabel(Direction1, 25);
+		addLabel(Direction2, 50);
+		if(Direction1 == 0){
+			addLabel(1, 29);
+		} else if(Direction1 == 1) {
+			addLabel(0, 21);
+		} else if(Direction1 == 2) {
+			addLabel(3, 29);
+		} else if(Direction1 == 3) {
+			addLabel(2, 21);
+		}
 	}
 }
