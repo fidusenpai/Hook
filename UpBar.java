@@ -10,8 +10,8 @@ public class UpBar extends Bar {
 		}
 	};
 	
-	UpBar(Rectangle b1, Rectangle bl1 , Rectangle l1){
-		super(b1, bl1, l1);
+	UpBar(Rectangle b1, Rectangle bl1 ,  int Length){
+		super(b1, bl1, 1, Length);
 		base.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {

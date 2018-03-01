@@ -10,8 +10,8 @@ public class LeftBar extends Bar {
 		}
 	};;
 	
-	LeftBar(Rectangle b1, Rectangle bl1 , Rectangle l1){
-		super(b1, bl1, l1);
+	LeftBar(Rectangle b1, Rectangle bl1 ,   int Length){
+		super(b1, bl1, 3, Length);
 		base.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {

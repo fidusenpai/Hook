@@ -10,8 +10,8 @@ public class RightBar extends Bar {
 		}
 	};;
 	
-	RightBar(Rectangle b1, Rectangle bl1 , Rectangle l1){
-		super(b1, bl1, l1);
+	RightBar(Rectangle b1, Rectangle bl1 ,   int Length){
+		super(b1, bl1, 2, Length);
 		base.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
@@ -35,7 +35,7 @@ public class RightBar extends Bar {
 	public void shrinkLines() {
 		for(int i = 0; i < labels.size(); i++ ) {
 			Rectangle temp = labels.get(i).getBounds();
-			if (temp.getX() + temp.getWidth() > baseLine.getX() + 4) {
+			if (temp.getX() + temp.getWidth() < baseLine.getX() + 4) {
 				labels.get(i).setBounds((int)temp.getX() + 1, (int)temp.getY(), (int)temp.getWidth(), (int)temp.getHeight());
 			} else if(temp.getWidth() > 0) {
 				labels.get(i).setBounds((int)temp.getX() + 1, (int)temp.getY(), (int)temp.getWidth() - 1, (int)temp.getHeight());
