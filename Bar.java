@@ -58,7 +58,6 @@ public class Bar {
 				output.setLocation(baseLine.getX(), baseLine.getY() + (baseLine.getHeight()/2)-2);
 			}
 		} else{
-			
 			temp = labels.get(labels.size()-1);
 			if (temp.getName().equals("0")) {
 				output.setLocation(temp.getX(), temp.getY());
@@ -72,6 +71,7 @@ public class Bar {
 		}
 		
 		return output;
+		//You're going to need to tell me what this does 
 	}
 	
 	public void addHook(int Direction1, int Direction2) {
@@ -86,5 +86,7 @@ public class Bar {
 		} else if(Direction1 == 3) {
 			addLabel(2, 21, 0);
 		}
+		//If Direction 1 = 1 then , = 2 then, = 3 then, = 4 then
 	}
+	//Method that creates a hook on a line
 }
