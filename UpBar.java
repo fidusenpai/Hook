@@ -10,14 +10,15 @@ public class UpBar extends Bar {
 		}
 	};
 	
-	UpBar(Rectangle b1, Rectangle bl1 ,  int Length){
-		super(b1, bl1, 1, Length);
+	UpBar(Point b1, Point bl1, int Length){
+		super(b1, bl1, 50, 4, 1, Length);
 		base.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
 					if(shrinking) {
 						shrinkTimer.cancel();
 						shrinking = false;
+						base.setBackground(Color.red);
 					} else {
 						testTask = new TimerTask() {
 							public void run() {
@@ -27,8 +28,8 @@ public class UpBar extends Bar {
 						shrinkTimer = new Timer();
 						shrinkTimer.scheduleAtFixedRate(testTask, 0, 10);
 						shrinking = true;
+						base.setBackground(Color.green);
 					}
-					System.out.println(shrinking);
 			}
 		});
 	}
