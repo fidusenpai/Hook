@@ -1,6 +1,6 @@
 /* NAMES
 03/08/2018
-This is the level class. */
+This is the level class. Sets the properties of the frame. */
 
 import java.awt.*;
 import java.awt.event.*;
@@ -8,19 +8,20 @@ import java.util.ArrayList;
 import java.util.Timer;
 
 @SuppressWarnings("serial")
+	//Allows for code to run smoothly (precautionary code)
 public class Level extends Frame implements WindowListener{
-
+	//This class can interact with the Frame's properties
 	private final int XSize = 800;
 	private final int YSize = XSize;	
 	private ArrayList<Bar> Bars = new ArrayList<Bar>();
 	public Timer collisionCompletion = new Timer();
-	
 	
 	Level(){
 		setSize(XSize, YSize);
 		setLayout(null);
 		setVisible(true);
 		addWindowListener(this);
+		//Default Constructor. Creates a visible 800x800 form with no layout
 	}
 	
 	Level(String Name){
@@ -29,6 +30,7 @@ public class Level extends Frame implements WindowListener{
 		setVisible(true);
 		setTitle(Name);
 		addWindowListener(this);
+		//Constructor that takes in a string: "Name". Creates a visible 800x800 form with no layout and the Title being set as whatever "Name" is
 	}
 	
 	public void addBar(Bar b1) {
