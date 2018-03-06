@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 @SuppressWarnings("serial")
+//Allows for code to run smoothly (precautionary code)
 public class MainMenu extends Level {
 	
 	private Button Exit = new Button("Exit");
