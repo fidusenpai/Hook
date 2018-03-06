@@ -1,3 +1,7 @@
+/* NAMES
+03/08/2018
+This is the main menu class. Generates what the user will first see upon loading the program. */
+
 import java.awt.*;
 import java.awt.event.*;
 
