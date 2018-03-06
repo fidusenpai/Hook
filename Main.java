@@ -4,6 +4,6 @@ This is the start (main) of the game: Hook */
 public class Main {
 	public static void main(String[] args) {
 		new MainMenu();
-		//see Main Menu class
+			//see Main Menu class
 	}
 }
