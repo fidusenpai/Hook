@@ -42,18 +42,22 @@ public class Level extends Frame implements WindowListener{
 	
 	public void addBar(Bar b1) {
 		Bars.add(b1);
-			//Method that adds a bar (based on what b1 is) *see Bar class
+			//Add the bar(b1) to the arraylist
 	}
+	//Method that adds a bar to the arraylist *see Bar class
 	
 	public void add(Bar b1) {
 		addBar(b1);
 		add(b1.base);
 		add(b1.baseLine);
-		for(int i = 0; i < b1.labels.size(); i++) {
+		//adds the bars, baseline, and the button onto the frame
+		for(int i = 0; i < b1.labels.size(); i++) { 
+			//goes through entire arraylist of b1 and
 			add(b1.labels.get(i));
+				//adds them to the frame
 		}
-			//Method that adds the bars, the baseline, and the button (as a set) onto the frame
 	}
+	//Method that adds the bars, the baseline, and the button (as a set) onto the frame
 	
 	public Boolean checkDone() {
 		boolean temp = true;
@@ -68,8 +72,8 @@ public class Level extends Frame implements WindowListener{
 		}
 		return temp;
 			//Return temp
-		//Method to test if the line is done shrinking
 	}
+	//Method to test if the line is done shrinking
 	
 	public Boolean isColliding(Label l1, Label l2) {
 		if(l1.getBounds().intersects(l2.getBounds())) {
@@ -79,8 +83,8 @@ public class Level extends Frame implements WindowListener{
 		}
 		return false;
 			//if not false
-		//Method that tests if any lines are colliding 
 	}
+	//Method that tests if any lines are colliding 
 	
 	@Override
 	public void windowActivated(WindowEvent e) {
