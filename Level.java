@@ -1,8 +1,11 @@
+/* NAMES
+03/08/2018
+This is the level class. */
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Timer;
-
 
 @SuppressWarnings("serial")
 public class Level extends Frame implements WindowListener{
