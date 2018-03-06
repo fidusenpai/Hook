@@ -1,9 +1,11 @@
+/* NAMES
+03/08/2018
+This is the Bar class. Creates lines, the baselines, and the buttons. */
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Timer;
 
 public class Bar {
-
 	public ArrayList<Label> labels = new ArrayList<Label>();
 	public Button base = new Button();
 	public Boolean shrinking = false;
@@ -11,35 +13,40 @@ public class Bar {
 	public Timer shrinkTimer = new Timer();
 	public Boolean Done = false;
 	
-	
 	Bar(Point b1, Point bl1, int bl1x, int bl1y, int Direction, int Length){
-		
 		base.setBackground(Color.red);
 		base.setBounds((int)b1.getX(), (int)b1.getY(), 30, 30);
+			//The button's properties are set
 		
 		baseLine.setBounds((int)bl1.getX(), (int)bl1.getY(), bl1x, bl1y);
 		baseLine.setBackground(Color.black);
+			//The baseline's properties are set
 		
 		addLabel(Direction, Length, 0);
+			//Creates a new label (Line) by calling on the addLabel method
 	}
 	
 	public void addLabel(int Direction, int Length, int spacing) {
 		Label temp = new Label();
 		Point coords = setStart();
+			//see setStart method
 		temp.setBackground(Color.black);
 		temp.setName(Integer.toString(Direction));
+			//setName?
 		if(Direction == 0) {
 			temp.setBounds((int)coords.getX(), (int)coords.getY()  - Length - spacing, 4, Length);
 		} else if(Direction == 1) {
 			temp.setBounds((int)coords.getX(), (int)coords.getY() + spacing, 4, Length);
 		} else if(Direction == 2) {
 			temp.setBounds((int)coords.getX() - Length - spacing, (int)coords.getY(), Length, 4);
-		}	else if(Direction == 3) {
+		}else if(Direction == 3) {
 			temp.setBounds((int)coords.getX() + spacing, (int)coords.getY(), Length, 4);
 		}
-		
+			//If the direction is (1 =  2 =  3 =  4 = ) then set the properties of the lines to it's respected dimensions
 		labels.add(temp);
+			//Add the label (line) to the arraylist
 	}
+	//Method to create a new line
 	
 	public Point setStart() {
 		Label temp = new Label();
