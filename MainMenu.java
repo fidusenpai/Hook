@@ -6,18 +6,21 @@ import java.awt.*;
 import java.awt.event.*;
 
 @SuppressWarnings("serial")
-//Allows for code to run smoothly (precautionary code)
+	//Allows for code to run smoothly (precautionary code)
 public class MainMenu extends Level {
-	
+	//The Main Menu is a subclass to the Level super class
 	private Button Exit = new Button("Exit");
 	private Button StartGame = new Button("Start");
 	private Label title = new Label("Hook");
 	private Font menuFont = new Font("Courier", Font.BOLD, 40);
 	private Font titleFont = new Font("Courier", Font.BOLD, 100);
+		/*Generates the Main Menu
+		which is two buttons: One to allow the player to play and the other to allower the player to exit the program 
+		and a label that outputs the title of the game: Hook. */
 	
 	MainMenu(){
 		super("Hook: Main Menu");
-		
+			
 		title.setBounds(275, 100, 600, 100);
 		title.setFont(titleFont);
 		add(title);
