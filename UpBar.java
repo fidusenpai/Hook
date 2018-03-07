@@ -1,12 +1,18 @@
+/* NAMES
+03/08/2018
+This is the Upbar class. Shrinks the bar down. */
+
 import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class UpBar extends Bar {
-
+	//Is a subclass to the bar class
 	public TimerTask testTask = new TimerTask() {
 		public void run() {
+			//When the timer runs 
 			shrinkLines();
+				//Call this method
 		}
 	};
 	
