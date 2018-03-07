@@ -53,6 +53,5 @@ public class DownBar extends Bar {
 				base.setVisible(false);
 			}
 		}
-	}
-	
+	}	
 }
