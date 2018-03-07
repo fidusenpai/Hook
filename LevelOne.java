@@ -29,5 +29,4 @@ public class LevelOne extends Level {
 		
 		collisionCompletion.scheduleAtFixedRate(checkColCom, 40, 30);
 	}
-	
 }
