@@ -1,3 +1,7 @@
+/* NAMES
+03/08/2018
+This is the Upbar class. Shrinks the bar down. */
+
 import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
