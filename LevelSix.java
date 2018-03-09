@@ -14,31 +14,31 @@ public class LevelSix extends Level {
     //If the user wins the level then proceed to next level
     //*see Level One and Level Two if necessary
 
-    private Point button1 = new Point(100, 100);
+    private Point button1 = new Point(50, 310);
     private Point base1 = new Point(100, 300);
 
-    private Point button2 = new Point(200, 100);
+    private Point button2 = new Point(500, 150);
     private Point base2 = new Point(490, 200);
 
-    private Point button3 = new Point(300, 100);
+    private Point button3 = new Point(50, 610);
     private Point base3 = new Point(100, 600);
 
-    private Point button4 = new Point(400, 100);
+    private Point button4 = new Point(300, 720);
     private Point base4 = new Point(290, 700);
 
-    private Point button5 = new Point(500, 100);
+    private Point button5 = new Point(720, 410);
     private Point base5 = new Point(700, 400);
 
-    private Point button6 = new Point(600, 100);
+    private Point button6 = new Point(720, 510);
     private Point base6 = new Point(700, 500);
 
-    private Point button7 = new Point(650, 100);
+    private Point button7 = new Point(610, 150);
     private Point base7 = new Point(600, 200);
 
-    private Point button8 = new Point(700, 100);
+    private Point button8 = new Point(210, 150);
     private Point base8 = new Point(200, 200);
 
-    private Point button9 = new Point(750, 100);
+    private Point button9 = new Point(310, 150);
     private Point base9 = new Point(300, 200);
 
     LevelSix(){

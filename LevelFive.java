@@ -14,22 +14,22 @@ public class LevelFive extends Level {
     //If the user wins the level then proceed to next level
     //*see Level One and Level Two if necessary
 
-    private Point button1 = new Point(100, 100);
+    private Point button1 = new Point(100, 210);
     private Point base1 = new Point(150, 200);
 
-    private Point button2 = new Point(200, 100);
+    private Point button2 = new Point(410, 100);
     private Point base2 = new Point(400, 150);
 
-    private Point button3 = new Point(300, 100);
+    private Point button3 = new Point(510, 100);
     private Point base3 = new Point(500, 150);
 
-    private Point button4 = new Point(400, 100);
+    private Point button4 = new Point(620, 460);
     private Point base4 = new Point(600, 450);
 
-    private Point button5 = new Point(500, 100);
+    private Point button5 = new Point(223, 670);
     private Point base5 = new Point(213, 650);
 
-    private Point button6 = new Point(600, 100);
+    private Point button6 = new Point(620, 610);
     private Point base6 = new Point(600, 600);
 
     LevelFive(){

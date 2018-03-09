@@ -14,16 +14,16 @@ public class LevelFour extends Level {
     //If the user wins the level then proceed to next level
     //*see Level One and Level Two if necessary
 
-    private Point button1 = new Point(100, 100);
+    private Point button1 = new Point(120, 310);
     private Point base1 = new Point(150, 300);
 
-    private Point button2 = new Point(200, 100);
+    private Point button2 = new Point(475, 615);
     private Point base2 = new Point(465, 600);
 
-    private Point button3 = new Point(300, 100);
+    private Point button3 = new Point(615, 410);
     private Point base3 = new Point(600, 400);
 
-    private Point button4 = new Point(400, 100);
+    private Point button4 = new Point(210, 615);
     private Point base4 = new Point(200, 600);
 
     LevelFour(){

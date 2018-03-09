@@ -11,10 +11,10 @@ import java.util.TimerTask;
 //Allows for code to run smoothly (precautionary code)
 public class LevelTwo extends Level {
 
-    private Point button1 = new Point(250, 250);
+    private Point button1 = new Point(620, 410);
     private Point base1 = new Point(600, 400);
 
-    private Point button2 = new Point(550, 100);
+    private Point button2 = new Point(385, 150);
     private Point base2 = new Point(375, 200);
 
     LevelTwo(){

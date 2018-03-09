@@ -11,7 +11,7 @@ import java.util.TimerTask;
 //Allows for code to run smoothly (precautionary code)
 public class LevelOne extends Level {
 
-    private Point button = new Point(200, 200);
+    private Point button = new Point(200, 240);
     private Point base = new Point(250, 230);
     //Declare the point for the button and base
 
