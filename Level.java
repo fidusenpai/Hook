@@ -18,6 +18,7 @@ public class Level extends Frame implements WindowListener{
     private final int YSize = XSize;
     private ArrayList<Bar> Bars = new ArrayList<Bar>();
     public Timer collisionCompletion = new Timer();
+    //This timer will be necessary to check for collision
 
     Level(){
         setSize(XSize, YSize);
@@ -37,32 +38,44 @@ public class Level extends Frame implements WindowListener{
 
     }
 
+
+
+
 //    public void addBar(Bar b1) {
 ////        Bars.add(b1);
 //        //Add the bar(b1) to the arraylist
 //    }
     //Method that adds a bar to the arraylist *see Bar class
 
+
+
+
     public void add(Bar b1) {
 //        addBar(b1);
         Bars.add(b1);
         //Add the bar(b1) to the arraylist
-        add(b1.base);
+        add(b1.TheButton);
         add(b1.baseLine);
         //Adds the bars, baseline, and the button onto the frame
         for(int i = 0; i < b1.labels.size(); i++) {
-            //goes through entire arraylist of the buttons and
+            //Goes through entire arraylist of the buttons and
             add(b1.labels.get(i));
-            //adds them to the frame
+            //Adds them to the frame
         }
     }
     //Method that adds the bars, the baseline, and the button (as a set) onto the frame
+
+
+
 
 //    public void add(MovingObjRight m1){
 //        for (int i = 0; i < m1.moving.size(); i++){
 //            add(m1.moving.get(i));
 //        }
 //    }
+
+
+
 
     public Boolean checkDone() {
         boolean temp = true;
@@ -82,7 +95,7 @@ public class Level extends Frame implements WindowListener{
 
     public Boolean isColliding(Label l1, Label l2) {
         if(l1.getBounds().intersects(l2.getBounds())) {
-            //If the rectangle (l1) is intersecting with the other rectangle (l2) then
+            //If the rectangle (l1) is intersecting with the other rectangle (l2) then (checks this by seeing if their "hitboxes" are colliding)
             return true;
             //return true
         }

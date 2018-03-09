@@ -26,11 +26,11 @@ public class MainMenu extends Level {
         title.setBounds(275, 100, 600, 100);
         title.setFont(titleFont);
         add(title);
-        //Set the properties of the label and add it to the frame
+        //Sets the properties of the label and adds it to the frame
 
         Exit.setBounds(100,600,600,50);
         Exit.setFont(menuFont);
-        //Set the properties of the exit button
+        //Sets the properties of the exit button
         Exit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {

@@ -10,17 +10,16 @@ import java.util.Timer;
 
 public class Bar {
     public ArrayList<Label> labels = new ArrayList<Label>();
-    public Button base = new Button();
-    public Boolean shrinking = false;
+    public Button TheButton = new Button();
     public Label baseLine = new Label();
     public Timer shrinkTimer = new Timer();
-    public Boolean Done = false;
-    public final byte BSize = 30;
-    public final byte LineThickness = 4;
+    //This timer will be needed to shrink the lines
+    public Boolean Done = false , shrinking = false;
+    public final byte BSize = 30, LineThickness = 4;
 
     Bar(Point b1, Point bl1, int bl1x, int bl1y, int Direction, int Length){
-        base.setBackground(Color.red);
-        base.setBounds((int)b1.getX(), (int)b1.getY(), BSize, BSize);
+        TheButton.setBackground(Color.red);
+        TheButton.setBounds((int)b1.getX(), (int)b1.getY(), BSize, BSize);
         //The button's properties are set
 
         baseLine.setBounds((int)bl1.getX(), (int)bl1.getY(), bl1x, bl1y);
