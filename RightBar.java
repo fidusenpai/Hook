@@ -66,4 +66,5 @@ public class RightBar extends Bar {
             }
         }
     }
+    //This method just shrinks a line
 }

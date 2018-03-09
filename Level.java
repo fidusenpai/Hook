@@ -34,23 +34,9 @@ public class Level extends Frame implements WindowListener{
         setTitle(Name);
         addWindowListener(this);
         //Constructor that takes in a string: "Name". Creates a visible 800x800 form with no layout and the Title being set as whatever "Name" is
-
     }
 
-
-
-
-//    public void addBar(Bar b1) {
-////        Bars.add(b1);
-//        //Add the bar(b1) to the arraylist
-//    }
-    //Method that adds a bar to the arraylist *see Bar class
-
-
-
-
     public void add(Bar b1) {
-//        addBar(b1);
         Bars.add(b1);
         //Add the bar(b1) to the arraylist
         add(b1.TheButton);
@@ -63,18 +49,6 @@ public class Level extends Frame implements WindowListener{
         }
     }
     //Method that adds the bars, the baseline, and the button (as a set) onto the frame
-
-
-
-
-//    public void add(MovingObjRight m1){
-//        for (int i = 0; i < m1.moving.size(); i++){
-//            add(m1.moving.get(i));
-//        }
-//    }
-
-
-
 
     public Boolean checkDone() {
         boolean temp = true;

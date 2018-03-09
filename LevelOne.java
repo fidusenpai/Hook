@@ -16,10 +16,14 @@ public class LevelOne extends Level {
     //Declare the point for the button and base
 
     private TimerTask checkColCom = new TimerTask() {
+        //Run code of the Level
         public void run() {
+            //2 lines collide recreate another identical
             if(checkDone()) {
+                //If all the lines are fully shrunk then
                 dispose();
                 new LevelTwo();
+                //generate the next level and get rid of level one and any of it's processes
                 collisionCompletion.cancel();
             }
         }
@@ -29,9 +33,10 @@ public class LevelOne extends Level {
         super("Hook: Level One");
         //Gives window a name at the top of the GUI
         LeftBar l1 = new LeftBar(button, base, 200);
+        //Create the lines
         add(l1);
+        //Add the line to the form
         collisionCompletion.scheduleAtFixedRate(checkColCom, 40, 30);
         //creates a timertask for the line shrink so it doesn't shrink instantly
     }
-
 }

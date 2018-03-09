@@ -10,7 +10,9 @@ import java.util.TimerTask;
 @SuppressWarnings("serial")
 //Allows for code to run smoothly (precautionary code)
 public class LevelFour extends Level {
-
+    //All other levels have the same concept of creating the buttons, baselines, lines, putting them onto the form and checking for any collisions
+    //If the user wins the level then proceed to next level
+    //*see Level One and Level Two if necessary
 
     private Point button1 = new Point(100, 100);
     private Point base1 = new Point(150, 300);
@@ -52,13 +54,10 @@ public class LevelFour extends Level {
                 if(checkDone()) {
                     dispose();
                     new LevelFive();
-                    //new LevelTwo();
                     collisionCompletion.cancel();
-
                 }
             }
         };
-
         collisionCompletion.scheduleAtFixedRate(checkColCom, 40, 30);
     }
 }

@@ -46,7 +46,7 @@ public class Bar {
         }else if(Direction == 3) {
             temp.setBounds((int)coords.getX() + spacing, (int)coords.getY(), Length, LineThickness);
         }
-        //If the direction is (1 =  2 =  3 =  4 = ) then set the properties of the lines to it's respected dimensions
+        //If the direction is (0 = up  1 = down 2 = left  3 = right) then set the properties of the lines to it's respected dimensions
         labels.add(temp);
         //Add the label (line) to the arraylist
     }
@@ -55,13 +55,16 @@ public class Bar {
     public Point setStart() {
         Label temp = new Label();
         Point output = new Point();
+        //if theres no labels yet
         if(labels.size() == 0) {
+            //create a label from the center of the baseline
             if(baseLine.getWidth() > baseLine.getHeight()) {
                 output.setLocation(baseLine.getX() + (baseLine.getWidth()/2)-2, baseLine.getY());
             } else {
                 output.setLocation(baseLine.getX(), baseLine.getY() + (baseLine.getHeight()/2)-2);
             }
         } else{
+            //otherwise, find where the end corner of the previous bar is
             temp = labels.get(labels.size()-1);
             if (temp.getName().equals("0")) {
                 output.setLocation(temp.getX(), temp.getY());
@@ -72,15 +75,17 @@ public class Bar {
             } else if (temp.getName().equals("3")) {
                 output.setLocation(temp.getX() + temp.getWidth() - LineThickness, temp.getY());
             }
+            //(0 = up  1 = down 2 = left  3 = right)
         }
-
+        //output the starting location
         return output;
-        //You're going to need to tell me what this does
     }
+    //This method just tells where the line will start (centre of baseline)
 
     public void addHook(int Direction1, int Direction2) {
         addLabel(Direction1, 25, 0);
         addLabel(Direction2, 50, 0);
+        //Figures out what the opposite direction of direction 1 is, and creates a label that is in a direction
         if(Direction1 == 0){
             addLabel(1, 29, 0);
         } else if(Direction1 == 1) {
@@ -90,7 +95,7 @@ public class Bar {
         } else if(Direction1 == 3) {
             addLabel(2, 21, 0);
         }
-        //If Direction 1 = 1 then , = 2 then, = 3 then, = 4 then
+        //If Direction1 = 0 then create a line that is going down, = 1 then a line going up, = 2 then a line going right, = 3 then a line going left
     }
     //Method that creates a hook on a line
 }
