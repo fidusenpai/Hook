@@ -2,7 +2,7 @@ package com.company;
 
 /* Andy, Zack, Shang-Lin
 03/09/2018
-This is the LeftBar class. Creates lines that shrink from the right. (shrinks left) It essentially works the same way as the RightBar class. *refer to RightBar class. */
+This is the LeftBar class. Creates lines that shrink from the right. (shrinks left) It essentially works the same way as the RightBar class however has different math in the shrinkLines method (because of the direction). *refer to RightBar class. */
 
 import java.util.*;
 import java.awt.*;
