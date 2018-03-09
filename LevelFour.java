@@ -1,9 +1,14 @@
 package com.company;
 
+/* Andy, Zack, Shang-Lin
+03/09/2018
+Code for Level 4 setup*/
+
 import java.awt.Point;
 import java.util.TimerTask;
 
 @SuppressWarnings("serial")
+//Allows for code to run smoothly (precautionary code)
 public class LevelFour extends Level {
 
 

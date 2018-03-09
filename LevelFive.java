@@ -8,6 +8,7 @@ import java.awt.Point;
 import java.util.TimerTask;
 
 @SuppressWarnings("serial")
+//Allows for code to run smoothly (precautionary code)
 public class LevelFive extends Level {
 
 

@@ -7,6 +7,7 @@ import java.awt.Point;
 import java.util.TimerTask;
 
 @SuppressWarnings("serial")
+//Allows for code to run smoothly (precautionary code)
 public class LevelThree extends Level {
 
     private Point button1 = new Point(200, 600);

@@ -14,8 +14,7 @@ import java.util.Timer;
 public class Level extends Frame implements WindowListener{
     //This class can interact with the Frame's properties and allows for the user to close the program and interact with the buttons on the top right corner of the program
 
-    private final int XSize = 800;
-    private final int YSize = XSize;
+    private final int XSize = 800, YSize = XSize;
     private ArrayList<Bar> Bars = new ArrayList<Bar>();
     public Timer collisionCompletion = new Timer();
     //This timer will be necessary to check for collision

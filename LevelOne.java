@@ -8,6 +8,7 @@ import java.awt.*;
 import java.util.TimerTask;
 
 @SuppressWarnings("serial")
+//Allows for code to run smoothly (precautionary code)
 public class LevelOne extends Level {
 
     private Point button = new Point(200, 200);

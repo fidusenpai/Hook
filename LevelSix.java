@@ -2,12 +2,13 @@ package com.company;
 
 /* Andy, Zack, Shang-Lin
 03/09/2018
-This is the Bar class. Creates lines, the baselines, and the buttons. */
+Code for Level 6 setup*/
 
 import java.awt.Point;
 import java.util.TimerTask;
 
 @SuppressWarnings("serial")
+//Allows for code to run smoothly (precautionary code)
 public class LevelSix extends Level {
 
     private Point button1 = new Point(100, 100);

@@ -3,10 +3,12 @@ package com.company;
 /* Andy, Zack, Shang-Lin
 03/09/2018
 Code for Level 2 setup*/
+
 import java.awt.*;
 import java.util.TimerTask;
 
 @SuppressWarnings("serial")
+//Allows for code to run smoothly (precautionary code)
 public class LevelTwo extends Level {
 
     private Point button1 = new Point(250, 250);
