@@ -21,7 +21,7 @@ public class MainMenu extends Level {
 		and a label that outputs the title of the game: Hook. */
 
     MainMenu(){
-        super("Hook: Main Menu");
+        super("Hook: Main Menu", "#FFECB3");
         //The main menu inherits the frame's properties for which the program will be on (see Level super class)
         title.setBounds(275, 100, 600, 100);
         title.setFont(titleFont);

@@ -18,16 +18,11 @@ public class Level extends Frame implements WindowListener{
     private ArrayList<Bar> Bars = new ArrayList<Bar>();
     public Timer collisionCompletion = new Timer();
     //This timer will be necessary to check for collision
+    public long Time;
 
-    Level(){
-        setSize(XSize, YSize);
-        setLayout(null);
-        setVisible(true);
-        addWindowListener(this);
-        //Default Constructor. Creates a visible 800x800 form with no layout
-    }
-
-    Level(String Name){
+    Level(String Name, String Colour){
+        setBackground(Color.decode(Colour));
+        //Sets the background colour
         setSize(XSize, YSize);
         setLayout(null);
         setVisible(true);

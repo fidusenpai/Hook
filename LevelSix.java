@@ -42,7 +42,7 @@ public class LevelSix extends Level {
     private Point base9 = new Point(300, 200);
 
     LevelSix(){
-        super("Hook: Level Six");
+        super("Hook: Level Six", "#C5CAE9");
 
         LeftBar L1 = new LeftBar(button1, base1, 400);
         L1.addLabel(3, 200, 30);
@@ -87,12 +87,15 @@ public class LevelSix extends Level {
 
         TimerTask checkColCom = new TimerTask() {
             public void run() {
+                Time += 1;
                 if(isColliding(U1.labels.get(0), L1.labels.get(1)) || isColliding(U3.labels.get(1), L1.labels.get(0)) || isColliding(U4.labels.get(1), L1.labels.get(0)) || isColliding(R1.labels.get(2), U4.labels.get(1)) || isColliding(R1.labels.get(1), U2.labels.get(3)) || isColliding(U3.labels.get(2), R1.labels.get(2)) || isColliding(R1.labels.get(1), U2.labels.get(5)) || isColliding(R1.labels.get(1), U2.labels.get(6)) || isColliding(R1.labels.get(1), U2.labels.get(7)) || isColliding(U2.labels.get(7), R2.labels.get(0)) || isColliding(U2.labels.get(6), R2.labels.get(0)) || isColliding(U2.labels.get(7), L2.labels.get(1)) || isColliding(L2.labels.get(1), D1.labels.get(0)) ||  isColliding(L2.labels.get(1), D1.labels.get(2)) || isColliding(L2.labels.get(1), D1.labels.get(4)) || isColliding(D1.labels.get(1), L2.labels.get(0)) || isColliding(D1.labels.get(3), L2.labels.get(1)) || isColliding(U2.labels.get(4), R1.labels.get(1)))  {
                     collisionCompletion.cancel();
                     new LevelSix();
+                    WinScreen.EndTime += Time;
                     dispose();
                 }
                 if(checkDone()) {
+                    WinScreen.EndTime += Time;
                     dispose();
                     new WinScreen();
                     //*see winscreen class

@@ -18,9 +18,12 @@ public class LevelOne extends Level {
     private TimerTask checkColCom = new TimerTask() {
         //Run code of the Level
         public void run() {
-            //2 lines collide recreate another identical
+            Time += 1;
+            //Increases time by 1 every 30 ms after the initial 40 ms
             if(checkDone()) {
                 //If all the lines are fully shrunk then
+                WinScreen.EndTime += Time;
+                //Add the time used on this level to the total time
                 dispose();
                 new LevelTwo();
                 //generate the next level and get rid of level one and any of it's processes
@@ -30,8 +33,8 @@ public class LevelOne extends Level {
     };
 
     LevelOne(){
-        super("Hook: Level One");
-        //Gives window a name at the top of the GUI
+        super("Hook: Level One", "#FFE082");
+        //Gives window a name at the top of the GUI, and set the background a colour
         LeftBar l1 = new LeftBar(button, base, 200);
         //Create the lines
         add(l1);

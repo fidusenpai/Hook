@@ -27,7 +27,7 @@ public class LevelFour extends Level {
     private Point base4 = new Point(200, 600);
 
     LevelFour(){
-        super("Hook: Level Four");
+        super("Hook: Level Four", "#BBDEFB");
 
         LeftBar L1 = new LeftBar(button1, base1, 100);
         add(L1);
@@ -46,14 +46,17 @@ public class LevelFour extends Level {
 
         TimerTask checkColCom = new TimerTask() {
             public void run() {
+                Time += 1;
                 if(isColliding(D2.labels.get(2), L1.labels.get(0)) || isColliding(D2.labels.get(1), R1.labels.get(1)) || isColliding(D1.labels.get(0), R1.labels.get(1))) {
                     collisionCompletion.cancel();
                     new LevelFour();
+                    WinScreen.EndTime += Time;
                     dispose();
                 }
                 if(checkDone()) {
-                    dispose();
                     new LevelFive();
+                    WinScreen.EndTime += Time;
+                    dispose();
                     collisionCompletion.cancel();
                 }
             }

@@ -33,7 +33,7 @@ public class LevelFive extends Level {
     private Point base6 = new Point(600, 600);
 
     LevelFive(){
-        super("Hook: Level Five");
+        super("Hook: Level Five", "#DCEDC8");
 
         LeftBar L1 = new LeftBar(button1, base1, 75);
         L1.addLabel(3, 500, 30);
@@ -65,14 +65,17 @@ public class LevelFive extends Level {
 
         TimerTask checkColCom = new TimerTask() {
             public void run() {
+                Time += 1;
                 if(isColliding(L1.labels.get(1), D1.labels.get(4)) || isColliding(L1.labels.get(1), U1.labels.get(1)) || isColliding(L1.labels.get(1), U2.labels.get(1)) || isColliding(U1.labels.get(1), R1.labels.get(4)) || isColliding(U2.labels.get(1), R1.labels.get(1)) || isColliding(D1.labels.get(0), R2.labels.get(2)) || isColliding(U2.labels.get(1), R2.labels.get(1)) || isColliding(D1.labels.get(3), R1.labels.get(5)) || isColliding(D1.labels.get(1), R2.labels.get(2))) {
                     collisionCompletion.cancel();
                     new LevelFive();
+                    WinScreen.EndTime += Time;
                     dispose();
                 }
                 if(checkDone()) {
-                    dispose();
                     new LevelSix();
+                    WinScreen.EndTime += Time;
+                    dispose();
                     collisionCompletion.cancel();
                 }
             }

@@ -20,7 +20,7 @@ public class LevelThree extends Level {
     private Point base2 = new Point(400, 600);
 
     LevelThree(){
-        super("Hook: Level Three");
+        super("Hook: Level Three", "#E1BEE7");
 
         LeftBar L1 = new LeftBar(button1, base1, 200);
         L1.addHook(0, 3);
@@ -33,12 +33,16 @@ public class LevelThree extends Level {
 
         TimerTask checkColCom = new TimerTask() {
             public void run() {
+                Time += 1;
                 if(isColliding(L1.labels.get(2), D1.labels.get(1)) || isColliding(L1.labels.get(3), D1.labels.get(0))) {
                     collisionCompletion.cancel();
                     new LevelThree();
+                    WinScreen.EndTime += Time;
                     dispose();
                 }
                 if(checkDone()) {
+                    WinScreen.EndTime += Time;
+                    System.out.println(WinScreen.EndTime/32);
                     new LevelFour();
                     dispose();
                     collisionCompletion.cancel();
